@@ -11,7 +11,7 @@ global shell
 def run_command(command):
     if os.name == "nt":
         try:
-            p = subprocess.check_output("cmd.exe /c '%s'" % command,stderr=subprocess.STDOUT,shell=True)
+            p = subprocess.check_output("cmd.exe /c %s" % command,stderr=subprocess.STDOUT,shell=True)
             return p
         except subprocess.CalledProcessError as e:
             return e.output
