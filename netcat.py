@@ -33,7 +33,7 @@ def server(listen_port,shell):
                 sys.exit(0)
             else:
                 data = run_command(cmd)
-                client_sock._sock.sendsend(data)
+                client_sock._sock.send(data)
     else:
         sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         sock.bind(("",listen_port))
